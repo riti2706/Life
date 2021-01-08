@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Life Pvt Ltd</title>
+    <link href="Css/Style.css" rel="stylesheet" type="text/css" />
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="Bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" type="text/javascript"></script>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!------------Header--------------->
+    <div class="container">
+    <div class="row"> 
+    
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding:1px 5px 1px 5px; font-size:small">
+     <asp:Image ID="ImgCall" runat="server" ImageUrl="~/Picture/Dialer.png" Height="30px" Width="30px" ToolTip="Click To Call" AlternateText="Call "/>
+       <a href="tel:+91 999 785 6952">+91 999 777 6999</a>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding:1px 5px 1px 5px; font-size:small">
+        <asp:Image ID="ImgMail" runat="server" ImageUrl="~/Picture/unnamed.png" Height="30px" Width="30px" ToolTip="Mail Us At" AlternateText="Mail " />
+        <a href="mailto:info@life.in">info@life.in</a>
+  </div>
+  <div class="col-xs-3 col-sm-3 col-md-3 col-xlg-3" style="padding:1px 5px 1px 5px; font-size:small">
+        <asp:Image ID="ImgFb" runat="server" ImageUrl="~/Picture/FbLogo.png" Width="30px" Height="30px" AlternateText="https://facebook.com/" ToolTip="Social Link" />
+      <a href="https://www.facebook.com/"  target="_blank">facebook.com</a>
+      </div>
+   <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding:1px 5px 1px 5px; font-size:small">
+        <asp:Image ID="ImgLocate" runat="server" ImageUrl="~/Picture/Map.png" Height="30px" Width="30px" ToolTip="Chhattarpur, New Delhi-110030" AlternateText="Reach Us At"/>
+        <a href="ContactUs.aspx">New Delhi-110030</a>
+        </div>
+        </div>
+        <div class="cleaner"></div>
+    </div>
+    <!------------HeaderEnds --------------->
+    <!------------Brand Banner-------->
+    <div class="jumbotron-fluid">
+    <%--BrandIcon + Img
+    //<asp:Image ID="ImgBrandBanner" runat="server" ImageUrl="~/Picture/Brand.png" Height="150px" Width="100%" BorderStyle="Groove" BorderColor="AppWorkspace" CssClass="img-fluid" />--%>
+    <asp:Image ID="ImgBrandBanner" runat="server" ImageUrl="~/Picture/ProductsHome.jpg" Height="150px" Width="100%" BorderStyle="Groove" BorderColor="AppWorkspace" CssClass="img-fluid" AlternateText="BrandImg + Brand Name"/>
+    </div>
+    <!--Brand Banner Ends-->
+    <!--NavigationMenu-->
+    <div class="container-fluid">
+    <div class="head-nav">
+ <ul class="navbar nav-tabs">
+  <li class="nav-item col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+    <a class="nav-link" href="Default.aspx"><b>HOME</b></a>
+  </li>
+  <li class="nav-item col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+    <a class="nav-link" href="AboutUs.aspx"><b>ABOUT US</b></a>
+  </li>
+  <li class="nav-item col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+    <a class="nav-link" href="Products.aspx"><b>PRODUCTS</b></a>
+  </li>
+  <li class="nav-item col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+    <a class="nav-link" href="ContactUs.aspx"><b>CONTACT US</b></a>
+  </li>
+</ul>
+</div>
+</div>
+    <!--NavigationMenuEnds-->
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+     <!---------------Footer-------------->
+  <!-- ABOUT -->
+  <div class="container-fluid text-center text-md-left">
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+        <!-- Content -->
+        <h5 class="text-uppercase">WHO WE ARE</h5>
+        <p><b>Life Pvt Ltd</b> is incorporated as private limited company under the 
+                Companies Act, 1956 in August, 2019 engaged in manufacturing and marketing 
+                a broad range of pharmaceutical products.</p>
+      </div>
+      <!-- Grid column Ends-->
+      <hr class="clearfix w-100 d-md-none pb-3"/>
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+        <!-- CONTACTS -->
+        <h5 class="text-uppercase">Locate Us</h5>
+
+        <ul class="list-unstyled">
+          <li style="display:inline-block"><asp:Image ID="ImgCO" runat="server" ImageUrl="~/Picture/CorpOfc.png" ToolTip="Corporate Office" Height="30px" Width="30px"/>
+          <a href="ContactUs.aspx">New Delhi-110030<br />India</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank">facebook.com</a></li>
+          <li><a href="mailto:info@life.in">info@life.in</a></li>
+          <li><a href="tel:+91 999 777 6999">+91 999 777 6999</a></li>
+        </ul>
+
+      </div>
+      <!-- Grid column Ends-->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+        <!--Quick Links -->
+        <h5 class="text-uppercase">Quick Links</h5>
+
+        <ul class="list-unstyled">
+          <li><a href="Default.aspx">HOME</a></li>
+          <li><a href="AboutUs.aspx">ABOUT US</a></li>
+          <li><a href="Products.aspx">PRODUCTS</a></li>
+          <li><a href="ContactUs.aspx">CONTACT US</a></li>
+        </ul>
+      </div>
+      <!-- Grid column Ends-->
+    </div>
+    <!-- Grid row -->
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">2019 © Copyright: LIFE PVT LTD</div>
+  <!-- Copyright -->
+    <!---------------Footer Ends-------------->
+    </form>
+</body>
+</html>
